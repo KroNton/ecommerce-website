@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
+:root {
+    --toggle-color1: #145969;
+    --toggle-color2: #0096B6;
+    --toggle-color3: #34BA79;
+    --toggle-color4: #80BB5D;
+    --btn-color: #3A3F35;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +18,24 @@
 
 body {
     background-color: #b890e6;
-    background: linear-gradient(to right, #b890e6, #b890e6);
+    background: #DFEBDF;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 180px;
+    /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -49,7 +70,7 @@ body {
 }
 
 .container button {
-    background-color: rgb(203 101 244);
+    background-color: var(--btn-color);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -138,16 +159,7 @@ body {
     margin: 20px 0;
 }
 
-.social-icons a {
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3px;
-    width: 40px;
-    height: 40px;
-}
+
 
 .toggle-container {
     position: absolute;
@@ -167,9 +179,9 @@ body {
 }
 
 .toggle {
-    background-color: #2b1369;
+    background-color: var(--bg-color);
     height: 100%;
-    background: linear-gradient(to right, #2b1661, #2b1369);
+    background: linear-gradient(to right, var(--toggle-color1), var(--toggle-color2));
     color: #fff;
     position: relative;
     left: -100%;

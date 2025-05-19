@@ -299,3 +299,8 @@ body {
     border-style: solid !important;
     border-color: #dc0aa1 !important;
 }
+
+#error_message {
+    color: #dc0aa1;
+    font-size: small;
+}

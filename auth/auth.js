@@ -14,20 +14,23 @@ function handleLogin() {
     container.classList.remove("active");
 }
 
-register_form.addEventListener('submit', async (e) => {
+register_form.addEventListener('submit', (e) => {
     // 
-    const name = signUpForm.querySelector('input[type="text"]').value;
-    const email = signUpForm.querySelector('input[type="email"]').value;
-    const password = signUpForm.querySelector('input[type="password"]').value;
-    const confirmPassword = signUpForm.querySelectorAll('input[type="password"]')[1].value;
-    let errors = []
-    errors = getSignupFormErrors(name.value, email.value, password.value, confirmPassword.value);
 
+    const name = register_form.querySelector('input[type="text"]');
+    const email = register_form.querySelector('input[type="email"]');
+    const password = register_form.querySelector('input[type="password"]');
+    const confirmPassword = register_form.querySelectorAll('input[type="password"]')[1];
+    let errors = []
+
+
+    errors = getSignupFormErrors(name, email, password, confirmPassword);
+    console.log(errors);
     if (errors.length >= 0) {
         // show error to UI
-
-        //prevent user to SignUP
         e.preventDefault();
+        //prevent user to SignUP
+
     }
     else {
         // post data to DB
@@ -36,12 +39,12 @@ register_form.addEventListener('submit', async (e) => {
 
 })
 
-signIn_form.addEventListener('submit', async (e) => {
+signIn_form.addEventListener('submit', (e) => {
     // e.preventDefault();
-    const email = signUpForm.querySelector('input[type="email"]').value;
-    const password = signUpForm.querySelector('input[type="password"]').value;
+    const email = signUpForm.querySelector('input[type="email"]');
+    const password = signUpForm.querySelector('input[type="password"]');
     let errors = []
-    errors = getSignInFormErrors(email.value, password.value);
+    errors = getSignInFormErrors(email, password);
 
     if (errors.length >= 0) {
         // show error to UI
@@ -59,13 +62,22 @@ signIn_form.addEventListener('submit', async (e) => {
 function getSignupFormErrors(name, email, password, confirmPassword) {
     let errors = [];
 
-    if (name === '' || name == null) {
+    if (name.value === '' || name.value == null) {
         errors.push('Name is Required.')
+        name.classList.add('incorrect');
     }
+    if (email.value === '' || email.value == null) {
+        errors.push('Email is Required.')
+        email.classList.add('incorrect');
+    }
+    if (password.value === '' || password.value == null) {
+        errors.push('Password is Required.')
+        password.classList.add('incorrect');
+    }
+    if (password.value !== confirmPassword.value) {
 
-    if (password !== confirmPassword) {
-
-
+        errors.push('password does not match.')
+        confirmPassword.classList.add('incorrect');
     }
 
     return errors
@@ -75,9 +87,14 @@ function getSignupFormErrors(name, email, password, confirmPassword) {
 // Frontend validation
 
 
+function getSignInFormErrors(email, password) {
 
 
-
-function getSignInFormErrors() {
-
+    if (email === '' || email == null) {
+        errors.push('Email is Required.')
+    }
+    if (password === '' || password == null) {
+        errors.push('Password is Required.')
+    }
+    return errors
 }

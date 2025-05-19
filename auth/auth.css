@@ -168,6 +168,7 @@ body {
 .container input {
     background-color: #eee;
     border: none;
+
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
@@ -292,4 +293,9 @@ body {
 
 .container.active .toggle-right {
     transform: translateX(200%);
+}
+
+.incorrect {
+    border-style: solid !important;
+    border-color: #dc0aa1 !important;
 }

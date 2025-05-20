@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 5000,
+        "currency": "EGP",
+        "category": "Electronics",
+        "description": "Noise-cancelling wireless headphones",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone X",
+        "price": 12000,
+        "currency": "EGP",
+        "category": "Electronics",
+        "description": "Latest model with 128GB storage",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 3,
+        "name": "Running Shoes",
+        "price": 2500,
+        "currency": "EGP",
+        "category": "Sports",
+        "description": "Lightweight running shoes with cushioning",
+        "image": "https://via.placeholder.com/300"
+    },
+    {
+        "id": 4,
+        "name": "Coffee Maker",
+        "price": 3500,
+        "currency": "EGP",
+        "category": "Home Appliances",
+        "description": "Automatic drip coffee machine",
+        "image": "https://via.placeholder.com/300"
+    }
+]

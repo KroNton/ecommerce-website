@@ -1,38 +1,146 @@
 [
     {
         "id": 1,
-        "name": "Wireless Headphones",
-        "price": 5000,
+        "name": "JBL Tune 720BT Wireless Headphones - Blue",
+        "price": 3399,
         "currency": "EGP",
-        "category": "Electronics",
+        "category": "Headphones",
         "description": "Noise-cancelling wireless headphones",
-        "image": "https://via.placeholder.com/300"
+        "image": "../images/products/product1.png"
     },
     {
         "id": 2,
-        "name": "Smartphone X",
-        "price": 12000,
+        "name": "Apple iPhone 13 (128 GB)",
+        "price": 31984,
         "currency": "EGP",
-        "category": "Electronics",
-        "description": "Latest model with 128GB storage",
-        "image": "https://via.placeholder.com/300"
+        "category": "Smartphones",
+        "description": "128GB storage capacity and 5G capability, providing ample space for apps/media ",
+        "image": "../images/products/product4.png"
     },
     {
         "id": 3,
-        "name": "Running Shoes",
-        "price": 2500,
+        "name": "Oppo Reno 13F 4G Dual Sim",
+        "price": 13999,
         "currency": "EGP",
-        "category": "Sports",
-        "description": "Lightweight running shoes with cushioning",
-        "image": "https://via.placeholder.com/300"
+        "category": "Smartphones",
+        "description": "Advanced dual 12MP camera system with Night mode and Cinematic mode for professional-quality photos and videos",
+        "image": "../images/products/product5.png"
     },
     {
         "id": 4,
-        "name": "Coffee Maker",
-        "price": 3500,
+        "name": "Xiaomi Redmi Watch 4",
+        "price": 3999,
         "currency": "EGP",
-        "category": "Home Appliances",
-        "description": "Automatic drip coffee machine",
-        "image": "https://via.placeholder.com/300"
+        "category": "Smart watches",
+        "description": "1.97 AMOLED Display, 20-Day Battery, HyperOS, Heart Rate & SpO2 Monitoring",
+        "image": "../images/products/product3.png"
+    },
+    {
+        "id": 5,
+        "name": "Apple AirPods (3rd generation)",
+        "price": 9832,
+        "currency": "EGP",
+        "category": "Headphones",
+        "description": "Spatial audio with dynamic head tracking places sound all around you",
+        "image": "../images/products/product2.png"
+    },
+    {
+        "id": 6,
+        "name": "Apple Watch Series 10",
+        "price": 19500,
+        "currency": "EGP",
+        "category": "Smart watches",
+        "description": "GPS 42 mm Smartwatch with Jet Black Aluminium Case with Black Sport Band - S/M. Fitness Tracker, ECG App, Always-On Retina Display",
+        "image": "../images/products/product6.png"
+    },
+    {
+        "id": 7,
+        "name": "Samsung Galaxy S23 Ultra (256GB)",
+        "price": 42999,
+        "currency": "EGP",
+        "category": "Smartphones",
+        "description": "200MP camera with Nightography, S Pen built-in, 5000mAh battery",
+        "image": "../images/products/product7.png"
+    },
+    {
+        "id": 8,
+        "name": "Huawei Band 8 Fitness Tracker",
+        "price": 2499,
+        "currency": "EGP",
+        "category": "Smart watches",
+        "description": "1.47\" AMOLED display, 14-day battery life, 96 workout modes, SpO2 monitoring",
+        "image": "../images/products/product8.png"
+    },
+    {
+        "id": 9,
+        "name": "Sony WH-CH720N Wireless Headphones",
+        "price": 5999,
+        "currency": "EGP",
+        "category": "Headphones",
+        "description": "Active noise cancellation with 35-hour battery life and multipoint connection",
+        "image": "../images/products/product9.png"
+    },
+    {
+        "id": 10,
+        "name": "Xiaomi Redmi Note 12 Pro (128GB)",
+        "price": 12499,
+        "currency": "EGP",
+        "category": "Smartphones",
+        "description": "6.67\" AMOLED 120Hz display, 50MP OIS camera, 5000mAh battery",
+        "image": "../images/products/product10.png"
+    },
+    {
+        "id": 11,
+        "name": "Amazfit GTS 4 Mini Smart Watch",
+        "price": 4599,
+        "currency": "EGP",
+        "category": "Smart watches",
+        "description": "1.65\" HD display, 15-day battery, 120+ sports modes, 5ATM waterproof",
+        "image": "../images/products/product11.png"
+    },
+    {
+        "id": 12,
+        "name": "OnePlus Buds Pro 2 Wireless Earbuds",
+        "price": 6999,
+        "currency": "EGP",
+        "category": "Headphones",
+        "description": "Active noise cancellation with 39dB reduction, Dynaudio co-developed sound",
+        "image": "../images/products/product12.png"
+    },
+    {
+        "id": 13,
+        "name": "Realme 11 Pro+ (256GB)",
+        "price": 18999,
+        "currency": "EGP",
+        "category": "Smartphones",
+        "description": "200MP OIS camera, 6.7\" curved AMOLED display, 100W fast charging",
+        "image": "../images/products/product13.png"
+    },
+    {
+        "id": 14,
+        "name": "Samsung Galaxy Watch6 Classic",
+        "price": 12999,
+        "currency": "EGP",
+        "category": "Smart watches",
+        "description": "47mm rotating bezel, Wear OS, blood pressure monitoring, 40-hour battery",
+        "image": "../images/products/product14.png"
+    },
+    {
+        "id": 15,
+        "name": "Soundcore by Anker Liberty 4 NC",
+        "price": 4299,
+        "currency": "EGP",
+        "category": "Headphones",
+        "description": "Hybrid active noise cancellation, 10mm drivers, 10-hour playtime",
+        "image": "../images/products/product15.png"
+    },
+    {
+        "id": 16,
+        "name": "Tecno Camon 20 Premier (256GB)",
+        "price": 14999,
+        "currency": "EGP",
+        "category": "Smartphones",
+        "description": "RGBW 50MP main camera, 6.67\" 120Hz display, 5000mAh battery",
+        "image": "../images/products/product16.png"
     }
 ]

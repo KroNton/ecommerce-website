@@ -38,7 +38,7 @@ function renderProducts() {
     productCard.className = 'product-card';
     productCard.innerHTML = `
       <div class="product-image">
-        <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300'">
+        <img src="${product.image}" alt="${product.name}" >
       </div>
       <div class="product-info">
         <h3>${product.name}</h3>

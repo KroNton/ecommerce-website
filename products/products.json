@@ -133,14 +133,5 @@
         "category": "Headphones",
         "description": "Hybrid active noise cancellation, 10mm drivers, 10-hour playtime",
         "image": "../images/products/product15.png"
-    },
-    {
-        "id": 16,
-        "name": "Tecno Camon 20 Premier (256GB)",
-        "price": 14999,
-        "currency": "EGP",
-        "category": "Smartphones",
-        "description": "RGBW 50MP main camera, 6.67\" 120Hz display, 5000mAh battery",
-        "image": "../images/products/product16.png"
     }
 ]

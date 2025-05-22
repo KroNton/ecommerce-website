@@ -1,3 +1,5 @@
+
+
 let products = []; // Changed from const to let so we can reassign
 
 async function fetchProducts() {

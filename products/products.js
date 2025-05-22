@@ -1,6 +1,5 @@
-
-
 let products = []; // Changed from const to let so we can reassign
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 async function fetchProducts() {
   try {
@@ -72,11 +71,38 @@ function renderProducts() {
   });
 }
 
-function addToCart(product) {
-  console.log('Added to cart:', product);
-  // Here you would implement your actual cart logic
-  alert(`Added ${product.name} to cart!`);
+
+function updateCartUI(cart) {
+  let total = 0
+  for (let index = 0; index < cart.length; index++) {
+
+    total += cart[index].quantity
+    console.log(total)
+  }
+
+  document.getElementById('cartcount').textContent = total;
+
 }
+
+
+// Add to cart
+function addToCart(product) {
+
+  const existingItem = cart.find(item => item.id === product.id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  // Refresh cart display
+  updateCartUI(cart);
+}
+
+
+updateCartUI(cart);
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', fetchProducts);

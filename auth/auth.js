@@ -85,11 +85,12 @@ signIn_form.addEventListener('submit', (e) => {
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const user = users.find(u => u.email === email.value && u.password === password.value);
         if (user) {
-            alert("Login successful! Redirecting...");
+            // alert("Login successful! Redirecting...");
             // Store current user session (optional)
             localStorage.setItem('currentUser', JSON.stringify(user));
-            // Redirect to a new page (e.g., dashboard)
-            window.location.href = "dashboard.html";
+            e.preventDefault();
+            console.log("Redirecting to products page...");
+            window.location.href = "../products/products.html";
         }
         else {
             error_message.innerText = "Invalid email or password!";

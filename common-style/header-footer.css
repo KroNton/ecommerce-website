@@ -85,6 +85,23 @@
     background-color: var(--primary-accent);
 }
 
+.authlinks button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a5aac;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.authlinks button:hover {
+    background-color: var(--primary-accent);
+}
 
 /* Footer Styles */
 footer {

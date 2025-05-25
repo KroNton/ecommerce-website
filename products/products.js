@@ -72,7 +72,7 @@ function renderProducts() {
 }
 
 
-function updateCartUI(cart) {
+function updateCartIconUI(cart) {
   let total = 0
   for (let index = 0; index < cart.length; index++) {
 
@@ -98,11 +98,11 @@ function addToCart(product) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   // Refresh cart display
-  updateCartUI(cart);
+  updateCartIconUI(cart);
 }
 
 
-updateCartUI(cart);
+updateCartIconUI(cart);
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', fetchProducts);

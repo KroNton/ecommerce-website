@@ -23,4 +23,6 @@ function logout() {
     window.location.href = '../auth/auth.html';
 }
 
+
 document.addEventListener('DOMContentLoaded', checkLogin);
+

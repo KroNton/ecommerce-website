@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantTech - Premium Tech Gadgets</title>
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="icon" type="image/x-icon" href="assest/logo.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assest/logo.jpg" alt="SantTech Logo" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products/products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartcount" class="cart-count">0</span>
+            </div>
+            <div id="authLinks" class="authlinks">
+                <a href="login.html" id="loginBtn">Login</a>
+                <a href="profile.html" id="profileLink" style="display:none;">Profile</a>
+                <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover the Future of Technology</h1>
+                <p>Premium gadgets at unbeatable prices</p>
+                <a href="products/products.html" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="featured-categories">
+            <h2>Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="assest/smartphones.jpg" alt="Smartphones">
+                    <h3>Smartphones</h3>
+                    <a href="products/products.html?category=smartphones">Explore</a>
+                </div>
+                <div class="category-card">
+                    <img src="assest/headphones.jpg" alt="Headphones">
+                    <h3>Headphones</h3>
+                    <a href="products/products.html?category=headphones">Explore</a>
+                </div>
+                <div class="category-card">
+                    <img src="assest/smartwatches.jpg" alt="Smart Watches">
+                    <h3>Smart Watches</h3>
+                    <a href="products/products.html?category=smartwatches">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+            <a href="products/products.html" class="view-all">View All Products →</a>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="benefits">
+            <h2>Why Choose SantTech?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Quality Guarantee</h3>
+                    <p>All products are tested and certified for quality assurance.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Free shipping on orders over 1000 EGP with 2-3 day delivery.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer service team is always ready to help you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest deals and product releases</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SantTech</h3>
+                <p>Your premier destination for cutting-edge technology and gadgets.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products/products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@santtech.com</p>
+                <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 SantTech. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="home/home.js"></script>
+    <!-- <script src="utils.js"></script> -->
+</body>
+
+</html>

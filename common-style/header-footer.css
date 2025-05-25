@@ -1,12 +1,12 @@
 :root {
-    --toggle-color1: #145969;
-    --toggle-color2: #0096B6;
-    --btn-color: #3A3F35;
-    --primary-accent: #b890e6;
-    --text-dark: #3A3F35;
-    --text-light: #f5f5f5;
+    --bg-color1: #f5f7fa;
+    --bg-color2: #e4e8ed;
+    --text-dark: #2d3748;
+    --primary-accent: #2a5aac;
+    --secondary-accent: #4fd1c5;
+    --toggle-color1: #4299e1;
+    --toggle-color2: #38b2ac;
 }
-
 
 
 /* Header Styles */

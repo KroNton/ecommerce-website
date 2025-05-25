@@ -1,14 +1,6 @@
-@import url("common-style/header-footer.css");
+@import url("../common-style/header-footer.css");
 
-:root {
-    --bg-color1: #f5f7fa;
-    --bg-color2: #e4e8ed;
-    --text-dark: #2d3748;
-    --primary-accent: #2a5aac;
-    --secondary-accent: #4fd1c5;
-    --toggle-color1: #4299e1;
-    --toggle-color2: #38b2ac;
-}
+
 
 * {
     margin: 0;

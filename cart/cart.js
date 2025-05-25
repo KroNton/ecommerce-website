@@ -3,15 +3,11 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartSummaryContainer = document.getElementById('cart-summary');
 const clearCartBtn = document.querySelector('.clear-cart-btn');
 
-function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartUI();
-}
 // Helper function to format price with commas
 function formatPrice(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
 // Function to render the cart
 function renderCart() {
     if (cart.length === 0) {
@@ -28,26 +24,28 @@ function renderCart() {
         cartItem.dataset.id = item.id;
 
         cartItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.name}" class="product-image">
-                        <div class="product-info">
-                            <h3 class="product-name">${item.name}</h3>
-                            <p class="product-description">${item.description}</p>
-                            <span class="product-category">${item.category}</span>
-                            <p class="product-price">${formatPrice(item.price)} ${item.currency}</p>
-                            
-                            <div class="quantity-controls">
-                                <button class="quantity-btn">-</button>
-                                <input type="number" value="${item.quantity}" min="1" max="${item.maxQuantity || item.quantity}" class="quantity-input">
-                                <button class="quantity-btn">+</button>
-                            </div>
-                            
-                            <button class="remove-btn">Remove</button>
-                        </div>
-                    `;
+            <img src="${item.image}" alt="${item.name}" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">${item.name}</h3>
+                <p class="product-description">${item.description}</p>
+                <span class="product-category">${item.category}</span>
+                <p class="product-price">${formatPrice(item.price)} ${item.currency}</p>
+                
+                <div class="quantity-controls">
+                    <button class="decrease-quantity quantity-btn">-</button>
+                    <span class="quantity-input">${item.quantity}</span>
+                    <button class="increase-quantity quantity-btn">+</button>
+                </div>
+                
+                <button class="remove-btn">Remove</button>
+            </div>
+        `;
 
         cartItemsContainer.appendChild(cartItem);
     });
 
+    // Add event listeners after rendering
+    addCartEventListeners();
     renderCartSummary();
 }
 
@@ -57,11 +55,86 @@ function renderCartSummary() {
     const currency = cart.length > 0 ? cart[0].currency : 'EGP';
 
     cartSummaryContainer.innerHTML = `
-                    <p class="total-price">Total: ${formatPrice(total)} ${currency}</p>
-                    <button class="checkout-btn">Proceed to Checkout</button>
-                `;
+        <p class="total-price">Total: ${formatPrice(total)} ${currency}</p>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    `;
 }
 
+// Add all cart event listeners
+function addCartEventListeners() {
+    // Decrease quantity
+    document.querySelectorAll('.decrease-quantity').forEach(btn => {
+        btn.addEventListener('click', decreaseQuantity);
+    });
 
+    // Increase quantity
+    document.querySelectorAll('.increase-quantity').forEach(btn => {
+        btn.addEventListener('click', increaseQuantity);
+    });
 
+    // Remove item
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', removeFromCart);
+    });
+
+    // Clear cart
+    if (clearCartBtn) {
+        clearCartBtn.addEventListener('click', clearCart);
+    }
+}
+
+// Update cart in localStorage and render the cart
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+
+function updateCartItem(productId, newQuantity) {
+    if (newQuantity > 0) {
+        const existingItem = cart.find(item => item.id === productId);
+        if (existingItem) {
+            existingItem.quantity = parseInt(newQuantity);
+        }
+    } else {
+        // Remove item if quantity is 0
+        cart = cart.filter(item => item.id !== productId);
+    }
+    updateCart();
+}
+
+function increaseQuantity(e) {
+    const itemElement = e.target.closest('.cart-item');
+    const itemId = parseInt(itemElement.dataset.id);
+    const item = cart.find(item => item.id === itemId);
+
+    if (item && item.quantity < 5) {
+        item.quantity += 1;
+        updateCart();
+    }
+}
+
+function decreaseQuantity(e) {
+    const itemElement = e.target.closest('.cart-item');
+    const itemId = parseInt(itemElement.dataset.id);
+    const item = cart.find(item => item.id === itemId);
+
+    if (item && item.quantity > 1) {
+        item.quantity -= 1;
+        updateCart();
+    }
+}
+
+function removeFromCart(e) {
+    const itemElement = e.target.closest('.cart-item');
+    const itemId = parseInt(itemElement.dataset.id);
+    cart = cart.filter(item => item.id !== itemId);
+    updateCart();
+}
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
+
+// Initialize cart on page load
 renderCart();

@@ -14,60 +14,81 @@
     <header class="main-header">
         <div class="header-content">
             <div class="logo-container">
-                <img src="../assest/logo.jpg" alt="Company Logo" class="logo">
+                <img src="../assest/logo.jpg" alt="Logo" class="logo">
             </div>
             <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
+                <ul>
                     <li><a href="../products/products.html">Products</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="../orders/orders.html">Checkout</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
         </div>
     </header>
+    <main class="auth-main">
+        <div class="container" id="container">
+            <div class="form-container sign-up">
 
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-
-            <form id="register-form">
-                <h1>Create New Account</h1>
-                <p id="error_message"></p>
-                <input type="text" placeholder="Name" id="name-input" />
-                <input type="email" placeholder="Email" id="email-input" />
-                <input type="password" placeholder="Password" id="pass-input" />
-                <input type="password" placeholder="Confirm Password" id="confirmPass-input" />
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form id="signin-form">
-                <h1>Sign In</h1>
-                <p id="error_message"></p>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
-                    <button onclick="handleLogin()" class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello,</h1>
-                    <p>
-                        Create New account to start shoping...
-                    </p>
-                    <button onclick="handleRegister()" class="hidden" id="register">Sign Up</button>
+                <form id="register-form">
+                    <h1>Create New Account</h1>
+                    <p id="error_message"></p>
+                    <input type="text" placeholder="Name" id="name-input" />
+                    <input type="email" placeholder="Email" id="email-input" />
+                    <input type="password" placeholder="Password" id="pass-input" />
+                    <input type="password" placeholder="Confirm Password" id="confirmPass-input" />
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form id="signin-form">
+                    <h1>Sign In</h1>
+                    <p id="error_message"></p>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all of site features</p>
+                        <button onclick="handleLogin()" class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello,</h1>
+                        <p>
+                            Create New account to start shoping...
+                        </p>
+                        <button onclick="handleRegister()" class="hidden" id="register">Sign Up</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SantTech</h3>
+                <p>Your one-stop shop for all your needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>info@santtech.com</p>
+                <p>+1 (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 SantTech. All rights reserved.
+        </div>
+    </footer>
 
     <script src="auth.js" defer></script>
+
 </body>
 
 </html>

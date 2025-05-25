@@ -5,8 +5,13 @@ const clearCartBtn = document.querySelector('.clear-cart-btn');
 
 // Helper function to format price with commas
 function formatPrice(price) {
+    // Check if price is undefined or not a number before calling toString()
+    if (typeof price === 'undefined' || isNaN(price)) {
+        return 'N/A'; // Or some other placeholder for undefined/invalid prices
+    }
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
 
 // Function to render the cart
 function renderCart() {

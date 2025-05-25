@@ -36,9 +36,7 @@ function displayFeaturedProducts(products) {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         productCard.innerHTML = `
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-            </div>
+
             <div class="product-info">
                 <h3>${product.name}</h3>
                 <div class="product-price">

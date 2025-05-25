@@ -99,6 +99,7 @@ function addToCart(product) {
   localStorage.setItem('cart', JSON.stringify(cart));
   // Refresh cart display
   updateCartIconUI(cart);
+  showAddedToCartMessage();
 }
 
 
@@ -106,3 +107,21 @@ updateCartIconUI(cart);
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', fetchProducts);
+
+function showAddedToCartMessage() {
+  const message = document.createElement('div');
+  message.className = 'cart-message';
+  message.textContent = 'Product added to cart!';
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    message.classList.add('show');
+  }, 10);
+
+  setTimeout(() => {
+    message.classList.remove('show');
+    setTimeout(() => {
+      document.body.removeChild(message);
+    }, 300);
+  }, 3000);
+}

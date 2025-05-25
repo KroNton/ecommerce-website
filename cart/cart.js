@@ -50,8 +50,10 @@ function renderCart() {
     });
 
     // Add event listeners after rendering
+    updateCartIconUI(cart);
     addCartEventListeners();
     renderCartSummary();
+
 }
 
 // Function to render cart summary
@@ -141,5 +143,21 @@ function clearCart() {
     updateCart();
 }
 
+
+function updateCartIconUI(cart) {
+    let total = 0
+    for (let index = 0; index < cart.length; index++) {
+
+        total += cart[index].quantity
+        console.log(total)
+    }
+
+    document.getElementById('cartcount').textContent = total;
+
+}
+
 // Initialize cart on page load
 renderCart();
+
+
+updateCartIconUI(cart);

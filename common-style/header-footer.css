@@ -552,3 +552,23 @@ footer::before {
     background: rgba(49, 130, 206, 0.1);
     color: var(--primary-accent);
 }
+
+/* Cart Message */
+.cart-message {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: var(--success-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transform: translateX(400px);
+    transition: var(--transition);
+    z-index: 1001;
+    font-weight: 600;
+}
+
+.cart-message.show {
+    transform: translateX(0);
+}

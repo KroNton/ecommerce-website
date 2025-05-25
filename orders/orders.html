@@ -21,15 +21,21 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../products/products.html">Products</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="#" class="active">Checkout</a></li>
+                    <li><a href="../cart/cart.html">Cart</a></li>
+                    <li><a href="../orders/orders.html" class="active">Checkout</a></li>
+                </ul>
                 </ul>
             </nav>
             <div class="cart-icon">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">3</span>
+            </div>
+            <div id="authLinks" class="authlinks">
+                <a href="../auth/auth.html" id="loginBtn">Login</a>
+                <a href="profile.html" id="profileLink" style="display:none;">Profile</a>
+                <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
             </div>
         </div>
     </header>
@@ -204,28 +210,28 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>ShopName</h3>
+                <h3>SantTech</h3>
                 <p>Your one-stop shop for all your needs.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/products.html">Products</a></li>
+                    <li><a href="../orders/orders.html">Orders</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>email@example.com</p>
+                <p>info@santtech.com</p>
                 <p>+1 (123) 456-7890</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2023 ShopName. All rights reserved.
+            &copy; 2025 SantTech. All rights reserved.
         </div>
     </footer>
+    <script src="../utils.js"></script>
 </body>
 
 </html>

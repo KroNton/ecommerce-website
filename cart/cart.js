@@ -67,6 +67,7 @@ function renderCartSummary() {
     `;
 }
 
+
 // Add all cart event listeners
 function addCartEventListeners() {
     // Decrease quantity
@@ -156,8 +157,20 @@ function updateCartIconUI(cart) {
 
 }
 
+
+
+
 // Initialize cart on page load
 renderCart();
 
 
 updateCartIconUI(cart);
+
+const checkoutBtn = document.querySelector('.checkout-btn');
+
+if (checkoutBtn) {  // Check if button exists to prevent errors
+
+    checkoutBtn.addEventListener('click', () => {
+        window.location.href = '../orders/orders.html'
+    })
+}

@@ -35,16 +35,34 @@ function displayFeaturedProducts(products) {
     featuredProducts.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
-        productCard.innerHTML = `
 
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <div class="product-price">
-                    <span class="current-price">${product.price} ${product.currency || 'EGP'}</span>
-                </div>
-                <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+        // Correct the image path based on where this script is running from
+        let correctedImagePath = product.image;
+
+        // If running from home/ directory (home.js)
+        if (window.location.pathname.includes('home.html')) {
+            correctedImagePath = product.image.replace('../', '');
+        }
+        else if (window.location.pathname.includes('products.html')) {
+            correctedImagePath = product.image; // already correct (../images/...)
+        }
+        // If running from root (index.html)
+        else {
+            correctedImagePath = product.image.replace('../', '');
+        }
+
+        productCard.innerHTML = `
+        <div class="product-image">
+            <img src="${correctedImagePath}" alt="${product.name}">
+        </div>
+        <div class="product-info">
+            <h3>${product.name}</h3>
+            <div class="product-price">
+                <span class="current-price">${product.price} ${product.currency || 'EGP'}</span>
             </div>
-        `;
+            <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+        </div>
+    `;
         featuredContainer.appendChild(productCard);
     });
 

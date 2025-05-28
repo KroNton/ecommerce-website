@@ -155,54 +155,8 @@
      margin-right: 0.5rem;
  }
 
- .shipping-methods {
-     margin-top: 2rem;
-     border-top: 1px solid #eee;
-     padding-top: 2rem;
- }
 
- .shipping-methods h3 {
-     font-size: 1.2rem;
-     color: var(--text-dark);
-     margin-bottom: 1rem;
-     font-weight: 600;
- }
 
- .method-option {
-     margin-bottom: 1rem;
- }
-
- .method-option input {
-     display: none;
- }
-
- .method-option label {
-     display: flex;
-     justify-content: space-between;
-     padding: 1rem;
-     border: 1px solid #ddd;
-     border-radius: 8px;
-     cursor: pointer;
-     transition: all 0.3s;
- }
-
- .method-option input:checked+label {
-     border-color: var(--primary-accent);
-     background-color: rgba(184, 144, 230, 0.05);
- }
-
- .method-name {
-     font-weight: 500;
- }
-
- .method-details {
-     color: #777;
-     font-size: 0.9rem;
- }
-
- .method-price {
-     font-weight: 600;
- }
 
  .order-summary {
      flex: 1;
@@ -457,20 +411,6 @@
      background: #f5f5f5;
  }
 
- .paypal-btn {
-     color: #003087;
-     border-color: #003087;
- }
-
- .google-pay-btn {
-     color: #4285F4;
-     border-color: #4285F4;
- }
-
- .apple-pay-btn {
-     color: #000;
-     border-color: #000;
- }
 
  .form-actions {
      display: flex;
@@ -551,7 +491,7 @@
  }
 
  .popup-header {
-     background-color: #4CAF50;
+     background-color: var(--toggle-color1);
      color: white;
      padding: 20px;
      text-align: center;
@@ -570,7 +510,7 @@
 
  .popup-icon {
      font-size: 60px;
-     color: #4CAF50;
+     color: var(--toggle-color1);
      margin-bottom: 20px;
  }
 
@@ -599,7 +539,7 @@
  }
 
  .confirm-btn {
-     background-color: #4CAF50;
+     background-color: var(--toggle-color1);
      color: white;
      border: none;
      padding: 10px 25px;
@@ -610,7 +550,7 @@
  }
 
  .confirm-btn:hover {
-     background-color: #45a049;
+     background-color: var(--toggle-color1);
  }
 
  .close-btn {

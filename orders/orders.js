@@ -24,7 +24,7 @@ function saveCartToOrders() {
         total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
     };
     localStorage.setItem('orders', JSON.stringify(newOrder));
-
+    return newOrder;
 }
 
 saveCartToOrders()
@@ -237,16 +237,22 @@ document.addEventListener('keydown', handleEscapeKey);
 
 // Function to update order data
 function updateOrderData() {
-    const now = new Date();
-    orderDateSpan.textContent = now.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-    orderIdSpan.textContent = orders.id
-    orderTotalSpan.textContent = orders.total
-}
+    // Get the single order (or null if none exists)
+    const order = JSON.parse(localStorage.getItem('orders'));
 
+    if (order) {
+        const orderDate = new Date(order.date);
+
+        orderDateSpan.textContent = orderDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        orderIdSpan.textContent = order.id;
+        orderTotalSpan.textContent = order.total.toFixed(2) + ' EGP';
+    }
+}
 // Function to show popup
 function showPopup() {
     popup.style.display = 'flex';
